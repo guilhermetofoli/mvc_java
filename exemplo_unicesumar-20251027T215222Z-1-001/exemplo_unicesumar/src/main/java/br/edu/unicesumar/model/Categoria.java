@@ -23,7 +23,6 @@ public class Categoria {
 
     public Categoria(String nome) {
         this.nome = nome;
-        this.id = id;
     }
 
     public int getId() {

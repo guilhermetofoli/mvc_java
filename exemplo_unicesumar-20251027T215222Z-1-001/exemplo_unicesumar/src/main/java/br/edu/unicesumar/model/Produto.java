@@ -28,9 +28,12 @@ public class Produto {
     private double preco;
 
     // Relacionamento ManyToOne com Categoria
-    // Muitos Produtos para Uma Categoria
     @ManyToOne
-    @JoinColumn(name = "categoria_id", nullable = false)
+    @JoinColumn(
+        name = "categoria_id", 
+        referencedColumnName = "id_categoria", // ESSENCIAL PARA RESOLVER O ERRO DE FK
+        nullable = false
+    )
     private Categoria categoria;
 
     public Produto() {}
